@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>notices</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="/abc/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="/color/css/mystyle.css" rel="stylesheet" />
+        <script type = "text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript" src = "/color/js/search.js"></script>
+        
+    </head>
+    <body id="page-top">
+        <nav>
+            <h3>Car Rental Service </h3>
+            <ul>    
+              
+                        <li class="nav-item mx-0 mx-lg-1"><a href="/logout" class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"><i class="fas fa-sign-out-alt mr-1 pr-1"></i>Logout</a></li>
+                   
+            </ul>
+        </nav>
+
+
+               <!-- Body Section
+       <section class="page-section portfolio" id="portfolio">
+            <div class="container">
+                <select id="searchby">
+                    <option value="nid">nid</option>
+                </select>
+                <input type="text" name="search" id="search" placeholder="Search Notice">
+            -->
+                <!-- ---------------Body start---------------- -->
+               <div id="table">
+                <table border="2" width="100%" align="center" >
+                    <thead>
+                        <tr>
+                            <th>Vehicle ID</th>
+                            <th>Vehicle Model</th>
+                            <th>Vehicle Image</th>
+                            <th>Vehicle Details</th>
+                            <th>Type</th>
+                            <th>Rent Price</th>
+                            <th>Action</th>
+                           
+                        </tr>
+                    </thead>
+                    <tbody align="center">
+                        <% vehicles.forEach(function(vehicle) { %>
+                            <tr>
+                                <td><%= vehicle.vid%></td>
+                                <td><%= vehicle.mdln%></td>
+                                <td><%= vehicle.img %></td>
+                                <td><%= vehicle.details %></td>
+                                <td><%= vehicle.category %></td>
+                                <td><%= vehicle.pr %></td>
+
+                        
+                                <td>
+                                    <a href="/user/book/<%= vehicle.vid %>" class="btn btn-block btn-danger">Book</a>
+                     
+                                </td>
+                            </tr>
+                        <% }) %>
+                </table>
+
+               </div>
+
+                <!-- ---------------Body End---------------- -->
+            </div>
+        </section>
+        <!-- Footer-->
+        <div class="footer">
+            <p>Copyrights @ayon</p>
+          </div>
+         </body>
+</html>
